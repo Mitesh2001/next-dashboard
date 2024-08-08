@@ -8,7 +8,7 @@ import { Suspense } from 'react';
 import { PageProps } from '@/.next/types/app/layout';
 import { fetchInvoicesPages } from '@/app/lib/data';
 
-export default async (props: PageProps) => {
+const Invoices = async (props: PageProps) => {
 
     const query = props.searchParams.query || '';
     const currentPage = Number(props.searchParams?.page) || 1;
@@ -33,3 +33,5 @@ export default async (props: PageProps) => {
         </div>
     );
 }
+
+export default Invoices
